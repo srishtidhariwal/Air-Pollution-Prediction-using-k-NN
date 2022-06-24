@@ -1,0 +1,12 @@
+Index,Model,Formula,Weight,Target Column Modified,Starting Time,Ending Time,RMSE,MAE,MSE,R_Square,Standard Deviation,Time
+1,Simple KNN,sqrt(sum(sq(u-v))),uniform,no,1650528559,1650528561,2.61920019,1.751954474,6.860209634,0.964804348,13.535285,2
+2.1,Distance Weighted KNN,sqrt(sum(sq(u-v))),1/distance,no,1650528598,1650528600,2.539927495,1.705956937,6.451231681,0.966863145,13.583893,2
+2.2,Distance Weighted KNN,sqrt(sum(sq(u-v))),1.0/(distance + 0.001),no,1651218483,1651389015,2.573177232,1.752582292,6.621241065,0.965968574,13.532747,1671.88493
+3.11,Attribute Weighted KNN Using Wminkowski (pearson),sqrt(sum(sq(abs(w(u-v))))),corr,no,1651264330,1651364684,2.091086117,1.292536794,4.37264115,0.977386343,13.681501,983.8669294
+3.12,Attribute Weighted KNN Using Our Way (pearson),sqrt(sum(sq(wu-wv))),corr,no,1651264167,1651370044,2.078549621,1.293027099,4.320368527,0.977814566,13.744814,1038.007942
+3.21,Attribute Weighted KNN Using Wminkowski (proposed formula),sqrt(sum(sq(abs(w(u-v))))),abs(corr)/(1-abs(corr)),no,1650541337,1650576974,2.427682348,1.64765717,5.893641582,0.969623085,13.667147,349.3834753
+3.22,Attribute Weighted KNN Using Our Way (proposed formula),sqrt(sum(sq(wu-wv))),abs(corr)/(1-abs(corr)),no,1651102600,1651153829,2.454185127,1.65637758,6.02302464,0.969044265,13.690832,502.2480411
+4.11,Attribute Weighted KNN Using Information Gain,sqrt(sum(abs(w(u-v)))),information gain,median substituted,1651925427,1651995840,0.249006297,0.124604529,0.062004136,0.933237806,0.93173,690.3233815
+4.12,Attribute Weighted KNN Using Information Gain,sqrt(sum(a(sq(w(u-v))))),information gain,no,1652063233,1652109232,0.156359202,0.099671199,0.0244482,0.975545992,0.983562,450.9723744
+4.21,Attribute Weighted KNN Using Information Gain,sqrt(sum(sq(wu-wv))),information gain,median substituted,1652156438,1652216635,0.250784836,0.124640998,0.062893034,0.931720721,0.929811,590.1686656
+4.22,Attribute Weighted KNN Using Information Gain,sqrt(sum(sq(wu-wv))),information gain,no,1652267496,1652315408,0.16124441,0.100133018,0.02599976,0.973963189,0.982397,469.7274944

@@ -1,0 +1,12 @@
+Index,Model,Formula,Weight,Target Column Modified,Starting Time,Ending Time,RMSE,MAE,MSE,R_Square,Standard Deviation,Time
+1,Simple KNN,sqrt(sum(sq(u-v))),uniform,no,1650528562,1650528563,3.132968382,2.009839275,9.815490882,0.969956027,17.68238,1
+2.1,Distance Weighted KNN,sqrt(sum(sq(u-v))),1/distance,no,1650528601,1650528603,3.141050869,1.980005723,9.866200559,0.969961864,17.716224,2
+2.2,Distance Weighted KNN,sqrt(sum(sq(u-v))),1.0/(distance+0.001),no,1651110532,1651218092,3.114681364,1.996358105,9.701239998,0.970495685,17.749387,1054.514064
+3.11,Attribute Weighted KNN Using Wminkowski (pearson),sqrt(sum(sq(abs(w(u-v))))),corr,no,1651052370,1651099197,2.39775723,1.324277455,5.749239734,0.982337276,17.858003,459.0873726
+3.12,Attribute Weighted KNN Using Our Way (pearson),sqrt(sum(sq(wu-wv))),corr,no,1650995847,1651051573,2.342731124,1.318194637,5.488389121,0.983315387,17.951196,546.3353201
+3.21,Attribute Weighted KNN Using Wminkowski (proposed formula),sqrt(sum(sq(abs(w(u-v))))),abs(corr)/(1-abs(corr)),no,1650943258,1650995203,4.769004676,2.95295655,22.7434056,0.930450031,17.397554,509.2688617
+3.22,Attribute Weighted KNN Using Our Way (proposed formula),sqrt(sum(sq(wu-wv))),abs(corr)/(1-abs(corr)),no,1650912636,1650954046,4.648343612,2.903905039,21.60709834,0.934023058,17.358218,405.9804505
+4.11,Attribute Weighted KNN Using Information Gain,sqrt(sum(abs(w(u-v)))),information gain,median substituted,1651995881,1652050366,0.171598899,0.080457188,0.029446182,0.920745649,0.571573,534.1649818
+4.12,Attribute Weighted KNN Using Information Gain,sqrt(sum(a(sq(w(u-v))))),information gain,no,1652109370,1652155975,0.141294082,0.082843436,0.019964018,0.979833982,0.984328,456.9160821
+4.21,Attribute Weighted KNN Using Information Gain,sqrt(sum(sq(wu-wv))),information gain,median substituted,1652216670,1652267034,0.226743106,0.103740497,0.051412436,0.94529144,0.94552,493.7676986
+4.22,Attribute Weighted KNN Using Information Gain,sqrt(sum(sq(wu-wv))),information gain,no,1652315801,1652365009,0.145159966,0.084061368,0.021071416,0.978787425,0.98574,482.4353126
